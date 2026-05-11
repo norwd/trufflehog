@@ -574,32 +574,21 @@ For example, to scan a `git` repository, start with
 trufflehog git https://github.com/trufflesecurity/trufflehog.git
 ```
 
-## Bash / Fish / Zsh Completion
+## Shell Completion
 
-TruffleHog provides completion scripts for all major shells (Bash, Fish, Zsh).
-Completion scripts can be generated using the `--completion-script-[bash/fish/zsh]` flags.
-For example, add the following statement to your `.bashrc` (or equivalent):
+TruffleHog provides completion scripts for most major shells (Bash and Zsh).
+Completion scripts can be generated using the `--completion-script-[bash/zsh]` flags.
 
-```
+For Bash, add the following to your `.bashrc`:
+
+```bash
 eval "$(trufflehog --completion-script-bash)"
 ```
 
-Or for Zsh:
+Or for Zsh, add the following to your `.zshrc`:
 
-```
+```zsh
 eval "$(trufflehog --completion-script-zsh)"
-```
-
-Or for fish:
-
-```
-trufflehog --completion-script-fish | source
-```
-
-Or, to install the fish completions permanently:
-
-```
-trufflehog --completion-script-fish > ~/.config/fish/completions/trufflehog.fish
 ```
 
 Note, the completion scripts are automatically generated, see also https://github.com/alecthomas/kingpin#bashzshfish-shell-completion
