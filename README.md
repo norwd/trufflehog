@@ -502,15 +502,6 @@ Flags:
       --user-agent-suffix=USER-AGENT-SUFFIX
                                  Suffix to add to User-Agent.
       --[no-]version             Show application version.
-      --completion-script-[bash/fish/zsh]
-                                 Generate shell completion scripts.
-                                 Place the following in your .bashrc:
-                                     eval "$(trufflehog --completion-script-bash)"
-                                 Or, for zsh users, place the following in your .zshrc:
-                                     eval "$(trufflehog --completion-script-zsh)"
-                                 For fish users, create a trufflehog.fish completions file, or source directly:
-                                     trufflehog --completion-script-fish | source # or
-                                     trufflehog --completion-script-fish > ~/.config/fish/completions/trufflehog.fish
 
 Commands:
 help [<command>...]
@@ -582,6 +573,36 @@ For example, to scan a `git` repository, start with
 ```
 trufflehog git https://github.com/trufflesecurity/trufflehog.git
 ```
+
+## Bash / Fish / Zsh Completion
+
+TruffleHog provides completion scripts for all major shells (Bash, Fish, Zsh).
+Completion scripts can be generated using the `--completion-script-[bash/fish/zsh]` flags.
+For example, add the following statement to your `.bashrc` (or equivalent):
+
+```
+eval "$(trufflehog --completion-script-bash)"
+```
+
+Or for Zsh:
+
+```
+eval "$(trufflehog --completion-script-zsh)"
+```
+
+Or for fish:
+
+```
+trufflehog --completion-script-fish | source
+```
+
+Or, to install the fish completions permanently:
+
+```
+trufflehog --completion-script-fish > ~/.config/fish/completions/trufflehog.fish
+```
+
+Note, the completion scripts are automatically generated, see also https://github.com/alecthomas/kingpin#bashzshfish-shell-completion
 
 ## Configuration
 
