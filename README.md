@@ -502,6 +502,15 @@ Flags:
       --user-agent-suffix=USER-AGENT-SUFFIX
                                  Suffix to add to User-Agent.
       --[no-]version             Show application version.
+      --completion-script-[bash/fish/zsh]
+                                 Generate shell completion scripts.
+                                 Place the following in your .bashrc:
+                                     eval "$(trufflehog --completion-script-bash)"
+                                 Or, for zsh users, place the following in your .zshrc:
+                                     eval "$(trufflehog --completion-script-zsh)"
+                                 For fish users, create a trufflehog.fish completions file, or source directly:
+                                     trufflehog --completion-script-fish | source # or
+                                     trufflehog --completion-script-fish > ~/.config/fish/completions/trufflehog.fish
 
 Commands:
 help [<command>...]
